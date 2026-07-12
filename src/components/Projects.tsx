@@ -1,4 +1,4 @@
-import { BarChart3, Truck, ArrowUpRight } from "lucide-react";
+import { BarChart3, FileSpreadsheet, ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
@@ -11,13 +11,12 @@ const projects = [
     icon: BarChart3,
   },
   {
-    title: "Supply Chain Dashboard",
+    title: "Advanced Excel Business Intelligence Dashboard",
     description:
-      "Supply chain performance tracking with executive KPI scorecards, logistics and geographic performance views, and profitability simulation & forecasting.",
-    tools: ["Power BI", "Excel"],
-    image: "/projects/supply-kpi.jpg",
-    pdf: "/projects/supply-chain-dashboard.pdf",
-    icon: Truck,
+      "An end-to-end Business Intelligence solution built completely in Microsoft Excel. This project features a centralized executive-level dashboard designed to track high-level sales performance and critical operational metrics.\n\nKey Highlights:\n- Executive Home Page: A dynamic, dark-themed visual layout tracking total revenue, transactional volume, and dynamic performance trends at a single glance.\n- Multi-Layered Reporting (ExcelP2 & ExcelP3): Supporting sub-pages that provide granular deep-dives into regional metrics, product category performance, and seasonal trends.\n- Advanced Techniques: Built using automated data transformations, nested formulations, complex Pivot Tables, and interactive cross-report Slicers to ensure seamless analysis.",
+    tools: ["Excel BI", "Data Visualization", "Executive Dashboard", "Data Transformation"],
+    image: "/projects/excel-thumbnail.png",
+    icon: FileSpreadsheet,
   },
 ];
 
@@ -58,14 +57,16 @@ export default function Projects() {
                         {tool}
                       </span>
                     ))}
-                    <a
-                      href={project.pdf}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="ml-auto inline-flex items-center gap-1 text-xs font-medium text-accent transition-colors hover:text-accent-hover"
-                    >
-                      View Report <ArrowUpRight size={14} />
-                    </a>
+                    {project.pdf && (
+                      <a
+                        href={project.pdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-auto inline-flex items-center gap-1 text-xs font-medium text-accent transition-colors hover:text-accent-hover"
+                      >
+                        View Report <ArrowUpRight size={14} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
