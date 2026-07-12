@@ -2,11 +2,11 @@ import { BarChart3, FileSpreadsheet, ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    title: "End-to-End Sales Project",
+    title: "End-to-End Retail Sales Analytics & Advanced RFM Segmentation",
     description:
-      "Comprehensive sales analysis covering revenue trends, product performance, regional breakdowns, and RFM customer segmentation using Power BI.",
-    tools: ["Power BI", "Excel", "SQL"],
-    image: "/projects/sales-overview.jpg",
+      "A comprehensive, data-driven Business Intelligence solution leveraging Python, MySQL, and Power BI to analyze retail performance, predict customer churn, and optimize marketing strategies through advanced RFM segmentation.\n\nKey Highlights:\n- Advanced RFM Analysis Home Page: Features a dynamic executive dashboard showcasing customer loyalty tiers, recency-frequency-monetary metrics, and high-value customer behavior.\n- Customer Churn & Predictive Insights: Integrated analytical models tracking churn risks, retention rates, and multi-page executive sales overviews.\n- Technical Architecture: Built using Python for exploratory data analysis (EDA), MySQL for structured data modeling, and Power BI DAX formulas for dynamic, real-time interactive reporting.",
+    tools: ["Data Analytics", "RFM Segmentation", "Power BI Dashboards", "SQL Data Modeling", "Python EDA", "Customer Churn Analysis"],
+    image: "/projects/sales-rfm.jpg",
     pdf: "/projects/end-to-end-sales.pdf",
     icon: BarChart3,
   },
