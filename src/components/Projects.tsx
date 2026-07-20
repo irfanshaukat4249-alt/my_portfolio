@@ -65,6 +65,38 @@ const projects = [
       },
     ],
   },
+  {
+    title: "Supply Chain Analytics & KPI Dashboard",
+    description:
+      "A comprehensive Power BI solution for supply chain performance monitoring, featuring executive KPI scorecards, logistics and geographic performance analysis, and profitability simulation and forecasting.",
+    tools: ["Power BI", "Supply Chain Analytics", "KPI Dashboards", "Data Modeling", "DAX"],
+    image: "/projects/supply-kpi.jpg",
+    pdf: "/projects/supply-chain-dashboard.pdf",
+    icon: Layers,
+    gallery: [
+      {
+        image: "/projects/supply-kpi.jpg",
+        label: "Executive KPI Scorecard",
+        icon: Eye,
+        insight:
+          "High-level executive dashboard tracking key supply chain metrics including delivery performance, inventory turnover, order accuracy, and overall operational efficiency across the organization.",
+      },
+      {
+        image: "/projects/supply-logistics.jpg",
+        label: "Logistics and Geographic Performance",
+        icon: MapPin,
+        insight:
+          "Geographic analysis of logistics operations, mapping delivery routes, regional performance metrics, and transportation efficiency to identify optimization opportunities in the supply chain network.",
+      },
+      {
+        image: "/projects/supply-forecasting.jpg",
+        label: "Profitability Simulation and Forecasting",
+        icon: TrendingUp,
+        insight:
+          "Advanced profitability modeling and what-if scenario analysis enabling data-driven decision making for cost optimization, pricing strategies, and revenue forecasting across supply chain operations.",
+      },
+    ],
+  },
 ];
 
 export default function Projects() {
