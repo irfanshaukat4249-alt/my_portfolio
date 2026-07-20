@@ -3,29 +3,30 @@ import {
   Database,
   BarChart3,
   Table,
+  PieChart,
 } from "lucide-react";
 
 const skills = [
   {
-    name: "Python",
+    name: "Advanced Python",
     description:
-      "Data cleaning, analysis, and visualization\n\u2022 Pandas, NumPy\n\u2022 Matplotlib, Seaborn",
+      "In-depth Exploratory Data Analysis (EDA), Data Cleaning, Statistical Analysis, Automation, and Advanced Analytics using Pandas, NumPy, Matplotlib, and Seaborn.",
     icon: Code2,
     iconBg: "bg-blue-500/10",
     iconText: "text-blue-400",
   },
   {
-    name: "SQL",
+    name: "Advanced SQL",
     description:
-      "Complex queries and database optimization\n\u2022 Joins, subqueries, window functions\n\u2022 Query performance tuning",
+      "Managing complex database schemas, writing highly optimized queries, Joins, Aggregations, CTEs, Window Functions, Views, and Stored Procedures for Query Performance Tuning.",
     icon: Database,
     iconBg: "bg-orange-500/10",
     iconText: "text-orange-400",
   },
   {
-    name: "Power BI",
+    name: "Power BI & BI Specialist",
     description:
-      "Interactive dashboards and data modeling\n\u2022 DAX measures, Power Query\n\u2022 KPI scorecards, forecasting",
+      "Designing dynamic, highly interactive Power BI dashboards, advanced DAX implementation, Custom KPIs, Data Modeling, Drill-through, and Predictive Forecasting.",
     icon: BarChart3,
     iconBg: "bg-yellow-500/10",
     iconText: "text-yellow-400",
@@ -33,10 +34,18 @@ const skills = [
   {
     name: "Advanced Excel",
     description:
-      "Spreadsheet analysis and automation\n\u2022 Pivot tables, VLOOKUP/XLOOKUP\n\u2022 Power Query, macros, modeling",
+      "Advanced financial modeling, automated workflows via Power Query, Pivot Tables, interactive KPI scorecards, and dynamic dashboards.",
     icon: Table,
     iconBg: "bg-green-500/10",
     iconText: "text-green-400",
+  },
+  {
+    name: "Analytics & Domain Expertise",
+    description:
+      "RFM Segmentation, Customer Churn Analysis, Predictive Forecasting, KPI Tracking, Data Visualization & Storytelling, Sales Analytics, and Supply Chain & Logistics.",
+    icon: PieChart,
+    iconBg: "bg-purple-500/10",
+    iconText: "text-purple-400",
   },
 ];
 
@@ -45,7 +54,7 @@ export default function Skills() {
     <section id="skills" className="border-t border-border px-6 py-24">
       <div className="mx-auto max-w-5xl">
         <h2 className="text-3xl font-bold tracking-tight">Skills</h2>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill) => {
             const Icon = skill.icon;
             return (
@@ -59,7 +68,7 @@ export default function Skills() {
                   <Icon size={24} />
                 </div>
                 <h3 className="text-xl font-bold">{skill.name}</h3>
-                <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-muted">
+                <p className="mt-2 text-sm leading-relaxed text-muted">
                   {skill.description}
                 </p>
               </div>
