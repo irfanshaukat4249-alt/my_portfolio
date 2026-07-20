@@ -150,11 +150,11 @@ export default function Projects() {
                           key={item.label}
                           className="group flex flex-col border-b border-border p-6 last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0"
                         >
-                          <div className="aspect-video w-full overflow-hidden rounded-lg bg-background shadow-md shadow-black/20">
+                          <div className="w-full overflow-hidden rounded-lg bg-background shadow-md shadow-black/20">
                             <img
                               src={item.image}
                               alt={item.label}
-                              className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                              className="w-full transition-transform duration-300 group-hover:scale-105"
                             />
                           </div>
                           <div className="mt-4 flex items-start gap-2">

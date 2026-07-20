@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import {
   Code2,
   Database,
@@ -49,31 +52,44 @@ const skills = [
   },
 ];
 
+function SkillCard({ skill }: { skill: (typeof skills)[number] }) {
+  const [expanded, setExpanded] = useState(false);
+  const Icon = skill.icon;
+
+  return (
+    <div className="group flex w-full flex-col rounded-xl border border-border bg-card p-6 transition-all hover:border-accent/30 hover:bg-card-hover sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
+      <div
+        className={`mb-4 flex h-12 w-12 items-center justify-center rounded-lg ${skill.iconBg} ${skill.iconText} transition-colors group-hover:bg-white/5`}
+      >
+        <Icon size={24} />
+      </div>
+      <h3 className="text-xl font-bold">{skill.name}</h3>
+      <div className="mt-2 flex-1">
+        <p
+          className={`text-sm leading-relaxed text-muted ${expanded ? "" : "line-clamp-2"}`}
+        >
+          {skill.description}
+        </p>
+      </div>
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="mt-3 self-start text-xs font-medium text-accent transition-colors hover:text-accent-hover"
+      >
+        {expanded ? "Read Less" : "Read More"}
+      </button>
+    </div>
+  );
+}
+
 export default function Skills() {
   return (
     <section id="skills" className="border-t border-border px-6 py-24">
       <div className="mx-auto max-w-5xl">
         <h2 className="text-3xl font-bold tracking-tight">Skills</h2>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {skills.map((skill) => {
-            const Icon = skill.icon;
-            return (
-              <div
-                key={skill.name}
-                className="group rounded-xl border border-border bg-card p-6 transition-all hover:border-accent/30 hover:bg-card-hover"
-              >
-                <div
-                  className={`mb-4 flex h-12 w-12 items-center justify-center rounded-lg ${skill.iconBg} ${skill.iconText} transition-colors group-hover:bg-white/5`}
-                >
-                  <Icon size={24} />
-                </div>
-                <h3 className="text-xl font-bold">{skill.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">
-                  {skill.description}
-                </p>
-              </div>
-            );
-          })}
+        <div className="mt-10 flex flex-wrap justify-center gap-6">
+          {skills.map((skill) => (
+            <SkillCard key={skill.name} skill={skill} />
+          ))}
         </div>
       </div>
     </section>
