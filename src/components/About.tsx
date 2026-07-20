@@ -1,4 +1,10 @@
+"use client";
+
+import { useState } from "react";
+
 export default function About() {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <section id="about" className="border-t border-border px-6 py-24">
       <div className="mx-auto max-w-3xl">
@@ -11,42 +17,58 @@ export default function About() {
             BI, and Advanced Excel, helping organizations make data-driven
             decisions using accurate analysis and interactive dashboards.
           </p>
-          <p>
-            My technical expertise includes Python with Pandas, NumPy,
-            Matplotlib, and Seaborn for data cleaning, exploratory data
-            analysis (EDA), statistical analysis, and visualization. I have
-            strong knowledge of Advanced SQL, including complex joins, Common
-            Table Expressions (CTEs), Window Functions, Subqueries, Views,
-            Stored Procedures, and Query Optimization for efficient data
-            extraction and analysis.
-          </p>
-          <p>
-            I design interactive Power BI dashboards using DAX, KPIs, Drill
-            Down, Drill Through, Slicers, Bookmarks, and Dynamic
-            Visualizations. My portfolio includes projects such as Customer
-            Churn Analysis, RFM Customer Segmentation, Sales Analytics
-            Dashboard, HR Analytics Dashboard, and Business Intelligence
-            Reporting.
-          </p>
-          <p>
-            With a strong analytical mindset and problem-solving approach, I
-            enjoy converting complex datasets into clear, actionable insights
-            that improve business performance. I am continuously learning
-            modern data technologies and best practices to deliver high-quality
-            analytics solutions.
-          </p>
-          <div className="rounded-lg border border-border bg-background p-4 text-sm leading-relaxed text-muted">
-            <span className="font-semibold text-foreground">
-              Technical Skills:{" "}
-            </span>
-            Python &bull; Pandas &bull; NumPy &bull; Matplotlib &bull; Seaborn
-            &bull; SQL &bull; Advanced SQL &bull; Power BI &bull; DAX &bull;
-            Advanced Excel &bull; Power Query &bull; Data Cleaning &bull; Data
-            Visualization &bull; Exploratory Data Analysis (EDA) &bull;
-            Dashboard Development &bull; KPI Reporting &bull; Business
-            Intelligence &bull; Customer Churn Analysis &bull; RFM Analysis
-            &bull; Data Analytics
+          <div
+            className={`grid transition-all duration-500 ease-in-out ${
+              expanded ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+            }`}
+          >
+            <div className="overflow-hidden">
+              <div className="space-y-5">
+                <p>
+                  My technical expertise includes Python with Pandas, NumPy,
+                  Matplotlib, and Seaborn for data cleaning, exploratory data
+                  analysis (EDA), statistical analysis, and visualization. I have
+                  strong knowledge of Advanced SQL, including complex joins,
+                  Common Table Expressions (CTEs), Window Functions, Subqueries,
+                  Views, Stored Procedures, and Query Optimization for efficient
+                  data extraction and analysis.
+                </p>
+                <p>
+                  I design interactive Power BI dashboards using DAX, KPIs, Drill
+                  Down, Drill Through, Slicers, Bookmarks, and Dynamic
+                  Visualizations. My portfolio includes projects such as Customer
+                  Churn Analysis, RFM Customer Segmentation, Sales Analytics
+                  Dashboard, HR Analytics Dashboard, and Business Intelligence
+                  Reporting.
+                </p>
+                <p>
+                  With a strong analytical mindset and problem-solving approach, I
+                  enjoy converting complex datasets into clear, actionable insights
+                  that improve business performance. I am continuously learning
+                  modern data technologies and best practices to deliver high-quality
+                  analytics solutions.
+                </p>
+                <div className="rounded-lg border border-border bg-background p-4 text-sm leading-relaxed text-muted">
+                  <span className="font-semibold text-foreground">
+                    Technical Skills:{" "}
+                  </span>
+                  Python &bull; Pandas &bull; NumPy &bull; Matplotlib &bull; Seaborn
+                  &bull; SQL &bull; Advanced SQL &bull; Power BI &bull; DAX &bull;
+                  Advanced Excel &bull; Power Query &bull; Data Cleaning &bull; Data
+                  Visualization &bull; Exploratory Data Analysis (EDA) &bull;
+                  Dashboard Development &bull; KPI Reporting &bull; Business
+                  Intelligence &bull; Customer Churn Analysis &bull; RFM Analysis
+                  &bull; Data Analytics
+                </div>
+              </div>
+            </div>
           </div>
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="text-sm font-medium text-accent transition-colors hover:text-accent-hover"
+          >
+            {expanded ? "Read Less" : "Read More"}
+          </button>
         </div>
       </div>
     </section>
