@@ -154,7 +154,7 @@ export default function Projects() {
                             <img
                               src={item.image}
                               alt={item.label}
-                              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                              className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
                             />
                           </div>
                           <div className="mt-4 flex items-start gap-2">
