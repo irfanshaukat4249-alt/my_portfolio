@@ -39,7 +39,7 @@ const projects = [
       "An end-to-end Business Intelligence solution built completely in Microsoft Excel. This project features a centralized executive-level dashboard designed to track high-level sales performance and critical operational metrics.",
     tools: ["Excel BI", "Data Visualization", "Executive Dashboard", "Data Transformation"],
     image: "/projects/excel-dashboard.png",
-    pdf: "/projects/supply-chain-dashboard.pdf",
+    pdf: "/projects/excel-dashboard-report.pdf",
     icon: FileSpreadsheet,
     gallery: [
       {
